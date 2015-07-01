@@ -1,0 +1,130 @@
+/* Stiziles */
+
+/*html, body {
+  background: #222222;
+  width:100%;
+  height:100%;
+  padding:0px;
+  margin: 0px;
+}*/
+
+/* main */
+
+/*#content{
+  width:100%;
+  height:100%;
+}*/
+/*.main {
+  width: 100%;
+  height: 100%;
+  background: #222222;
+  color: #fff;
+}*/
+
+/*.main img {
+  width: 103px;
+  height: 89px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.fade-enter {
+  opacity: 0.01;
+  transition: opacity .5s ease-in;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+}
+
+.fade-leave {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0.01;
+}*/
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
+
+#trainStopsBox {
+  background-color: #CE072D;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  margin-bottom: 10px;
+}
+
+#trainStopsList {
+  display: flex;
+  justify-content: center;
+}
+
+.trainStop {
+  display: inline-block;
+}
+
+.instagramImage {
+  width: 400px;
+  height: 400px;
+}
+
+.instagramImageListItem {
+  list-style: none;
+  display: inline-block;
+}
+
+#instagramList {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
+
+.instagramPostsByStop {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
+
+#instagramContainer {
+  margin-top: 5%;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+  display: inline-block;
+}
+.fakeButton {
+  /*border: 1px solid white;*/
+  background-color: white;
+  border-radius: 20px;
+  padding: 0px 9px;
+  margin: 0px 3px 0px 3px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.fakeButton:hover {
+  background-color: black;
+  color: white;
+}
+
+ul.postsByStop ul:nth-child(even) {
+  border: 5px solid black;
+}
