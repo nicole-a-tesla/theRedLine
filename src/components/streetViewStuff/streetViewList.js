@@ -3,7 +3,7 @@ var $ = require('jquery');
 
 var StreetViewList = React.createClass({
   getInitialState: function() {
-    return {imgUrl: 'https://maps.googleapis.com/maps/api/streetview?size=400x400&location=' + this.props.data.lat + ',' + this.props.data.long}
+    return {imgUrl: 'https://maps.googleapis.com/maps/api/streetview?size=400x400&location=' + this.props.data.lat + ',' + this.props.data.long + '&pitch=-0.76'}
   },
 
   // loadStreetViewData: function(event) {
