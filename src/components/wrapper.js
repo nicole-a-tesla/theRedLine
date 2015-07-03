@@ -7,18 +7,6 @@ var ctaStops =  require('./ctaStops')
 
 var Wrapper = React.createClass({
   loadStops: function() {
-    // $.ajax({
-    //   url: this.props.url,
-    //   dataType: 'json',
-    //   cache: false,
-    //   success: function(data) {
-    //     this.setState({data: data});
-    //   }.bind(this),
-    //   error: function(xhr, status, err) {
-    //     // console.error(this.props.url, status, err.toString());
-    //   }.bind(this)
-    // });
-    // this.setState({data:ctaStops})
   },
 
   getInitialState: function() {
@@ -26,7 +14,6 @@ var Wrapper = React.createClass({
   },
 
   componentDidMount: function() {
-    // this.loadStops();
   },
 
   render: function() {

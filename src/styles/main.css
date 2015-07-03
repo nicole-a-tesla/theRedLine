@@ -94,12 +94,9 @@ ul.postsByStop {
 }
 
 ul.postsByStop ul {
-  border: 1px solid blue;
-
   display: flex;
   flex-flow: row-wrap;
   -webkit-flex-flow: row wrap;
-  /*max-width: 1000px;*/
   margin: 0 auto;
   padding: 0;
 
@@ -117,12 +114,15 @@ ul.postsByStop ul:hover img.instagramImage {
   max-width: none;
   width: 400px;
   height: 400px;
-  /*display: inline-block;*/
 
 }
 
+.streetViewByStop {
+  padding: 0;
+  margin: 0;
+}
+
 #instagramContainer {
-  margin-top: 5%;
 }
 
 li {
