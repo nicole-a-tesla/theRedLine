@@ -16,11 +16,11 @@ var InstagramList = React.createClass({
         dataType: 'jsonp',
 
         success: function(data) {
-          // console.log("SUCCESS");
-          // console.log(data);
           var newUrls = []
 
-          for (var i = 0; i < data["data"].length; i++) {
+          // temp limit to 12 images:
+          // for (var i = 0; i < data["data"].length; i++) {
+          for (var i = 0; i < 12; i++) {
             newUrls.push(data["data"][i]["images"]["standard_resolution"]["url"]);
           }
 
@@ -28,7 +28,6 @@ var InstagramList = React.createClass({
 
         }.bind(this),
         error: function(xhr, status, err) {
-          // console.log("ERROR");
           console.error(this.props.url, status, err.toString());
         }.bind(this)
     });
@@ -46,7 +45,7 @@ var InstagramList = React.createClass({
     });
 
     return (
-        <ul id={"near" + this.props.data.station_name}>
+        <ul className={"near" + this.props.data.station_name} id={"instagramNear" + this.props.data.station_name} >
           {instagramNodes}
         </ul>
     );
