@@ -29,7 +29,7 @@ var InstagramList = React.createClass({
         }.bind(this),
         error: function(xhr, status, err) {
           // console.log("ERROR");
-          console.error(this.props.url, status, err.toString());;
+          console.error(this.props.url, status, err.toString());
         }.bind(this)
     });
   },
