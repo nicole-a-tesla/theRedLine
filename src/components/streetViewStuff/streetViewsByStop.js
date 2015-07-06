@@ -1,5 +1,5 @@
 var React = require('react');
-var StreetViewList = require('./streetViewList')
+var StreetViewList = require('./streetViewList');
 
 var StreetViewsByStop = React.createClass({
     render: function() {
