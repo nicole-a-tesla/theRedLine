@@ -1,7 +1,7 @@
 var React = require('react');
 var TrainStopsMenu = require('./trainStuff/trainStopsMenu');
 var TrainStation = require('./trainStation');
-//
+
 var InstagramContainer = require('./instagramStuff/instagramContainer');
 var StreetViewContainer = require('./streetViewStuff/streetViewContainer');
 
@@ -30,7 +30,9 @@ var Wrapper = React.createClass({
     return (
       <div id="wrapper">
         <TrainStopsMenu stationName={this.state.data.station_name} lat={this.state.data.lat} long={this.state.data.long} data={this.state.data}></TrainStopsMenu>
+        <div id='stationsWrapper'>
           {trainStationNodes}
+        </div>
       </div>
     );
   }

@@ -3,6 +3,7 @@ var StreetViewList = require('./streetViewList');
 
 var StreetViewsByStop = React.createClass({
     render: function() {
+      console.log("Is the streetViewsByStop method even getting called??");
       var streetViewNodes = this.props.data.map(function(trainStopData){
         return (
           <StreetViewList data={trainStopData} />

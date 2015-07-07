@@ -51,6 +51,16 @@ a {
   color: inherit;
 }
 
+#stationsWrapper {
+  display: flex;
+  -webkit-flex-flow: row;
+}
+
+.trainStation {
+  min-width: 400px;
+  margin-top: 5%;
+}
+
 #wrapper {
   white-space: nowrap;
 }
@@ -74,42 +84,32 @@ a {
 }
 
 img.instagramImage {
-
-  /*width: 100%;*/
   max-width: 100px;
-  /*height: auto;*/
 }
-
 
 .instagramImageListItem {
   margin: 0;
-  /*-webkit-flex-shrink: 2;*/
-  /*transition: .5s;*/
 }
 
-ul.postsByStop {
-  display: flex;
+ul.instagramList {
   padding: 0;
+  margin: 0;
   min-width: 400px;
-}
+  max-width: 400px;
+  overflow: scroll;
 
-ul.postsByStop ul {
   display: flex;
   flex-flow: row-wrap;
   -webkit-flex-flow: row wrap;
-  margin: 0 auto;
-  padding: 0;
-
-  min-width: 400px;
 }
 
-ul.postsByStop ul:hover {
+ul.instagramList:hover {
   -webkit-flex-flow: row wrap;
   max-width: none;
   min-width: 4800px;
 }
 
-ul.postsByStop ul:hover img.instagramImage {
+ul.instagramList:hover img.instagramImage {
   /* transform into row of full-sized images */
   max-width: none;
   width: 400px;

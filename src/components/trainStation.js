@@ -8,8 +8,9 @@ var TrainStation = React.createClass({
     console.log('this.props.data = ');
     console.log(this.props.data);
     return (
-      <div className={this.props.data.station_name}>
+      <div className='trainStation' id={this.props.data.station_name}>
         <StreetViewContainer className={'streetViewContainer' + this.props.data.station_name} stationName={this.props.data.station_name} lat={this.props.data.lat} long={this.props.data.long} data={this.props.data} />
+        <InstagramContainer className={'instagramContainer' + this.props.data.station_name} stationName={this.props.data.station_name} lat={this.props.data.lat} long={this.props.data.long} data={this.props.data} />
       </div>
     );
   }

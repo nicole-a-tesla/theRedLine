@@ -8,6 +8,7 @@ var StreetViewList = React.createClass({
 
 
   render: function() {
+    console.log("Pretty sure streetViewList never gets called either...?");
     return (
       <li className={"near" + this.props.data.station_name} id={"streetViewNear" + this.props.data.station_name} >
         <img className='streetViewImage' src={this.state.imgUrl} />
