@@ -1,7 +1,6 @@
 var React = require('react');
 var TrainStopsList = require('./TrainStopsList');
 
-
 var TrainStopsMenu = React.createClass({
   render: function() {
     return (

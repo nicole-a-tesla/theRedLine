@@ -2,10 +2,6 @@ var React = require('react');
 var TrainStopsMenu = require('./trainStuff/trainStopsMenu');
 var TrainStation = require('./trainStation');
 
-var InstagramContainer = require('./instagramStuff/instagramContainer');
-var StreetViewContainer = require('./streetViewStuff/streetViewContainer');
-
-
 var $ = require('jquery')
 var ctaStops =  require('./ctaStops')
 

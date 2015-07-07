@@ -42,8 +42,6 @@ var InstagramList = React.createClass({
   },
 
   render: function() {
-    console.log('rendering instagramList!');
-    console.log('generating instagramNodes...');
     var instagramNodes = this.state.urls.map(function (imageUrl) {
       return (
         <InstagramImage imageUrl={imageUrl}></InstagramImage>
