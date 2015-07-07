@@ -2,8 +2,8 @@ var React = require('react');
 var TrainStopsMenu = require('./trainStuff/trainStopsMenu');
 var TrainStation = require('./trainStation');
 
-var $ = require('jquery')
-var ctaStops =  require('./ctaStops')
+var $ = require('jquery');
+var ctaStops =  require('./ctaStops');
 
 var Wrapper = React.createClass({
   loadStops: function() {
