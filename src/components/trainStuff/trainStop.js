@@ -8,7 +8,7 @@ var TrainStop = React.createClass({
   render: function() {
     return (
       <li className="trainStop" id={this.props.stopName + "Menu"} >
-        <a href={"#near" + this.props.stopName}>
+        <a href={"#" + this.props.stopName}>
           <div className="fakeButton">
             {this.props.stopName[0]}
           </div>
