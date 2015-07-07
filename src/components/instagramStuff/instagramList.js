@@ -42,6 +42,8 @@ var InstagramList = React.createClass({
   },
 
   render: function() {
+    console.log('rendering instagramList!');
+    console.log('generating instagramNodes...');
     var instagramNodes = this.state.urls.map(function (imageUrl) {
       return (
         <InstagramImage imageUrl={imageUrl}></InstagramImage>
@@ -49,7 +51,7 @@ var InstagramList = React.createClass({
     });
 
     return (
-        <ul className={"near" + this.props.data.station_name} id={"instagramNear" + this.props.data.station_name} >
+        <ul className='instagramList' id={"instagramNear" + this.props.data.station_name} >
           {instagramNodes}
         </ul>
     );

@@ -1,7 +1,11 @@
 var React = require('react');
 var TrainStopsMenu = require('./trainStuff/trainStopsMenu');
+var TrainStation = require('./trainStation');
+
 var InstagramContainer = require('./instagramStuff/instagramContainer');
-var StreetViewContainer = require('./streetViewStuff/streetViewContainer')
+var StreetViewContainer = require('./streetViewStuff/streetViewContainer');
+
+
 var $ = require('jquery')
 var ctaStops =  require('./ctaStops')
 
@@ -17,11 +21,18 @@ var Wrapper = React.createClass({
   },
 
   render: function() {
+    var trainStationNodes = this.state.data.map(function (thisStationData) {
+      // console.log(thisStationData);
+      return (
+        <TrainStation data={thisStationData} />
+      );
+    });
     return (
       <div id="wrapper">
-        <TrainStopsMenu data={this.state.data} />
-        <StreetViewContainer data={this.state.data} />
-        <InstagramContainer data={this.state.data} />
+        <TrainStopsMenu stationName={this.state.data.station_name} lat={this.state.data.lat} long={this.state.data.long} data={this.state.data}></TrainStopsMenu>
+        <div id='stationsWrapper'>
+          {trainStationNodes}
+        </div>
       </div>
     );
   }
