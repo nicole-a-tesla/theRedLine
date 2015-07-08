@@ -34,10 +34,12 @@ var TrainStop = React.createClass({
         $('#' + this.props.stopName + 'Menu a div').addClass('active')
 
         var lastStop = this.props.position - 1;
+        var nextStop = this.props.position + 1;
 
-        if (lastStop > 0) {
+        // if (lastStop > 0) {
           $('a div#' + lastStop).removeClass('active');
-        }
+          $('a div#' + nextStop).removeClass('active');
+        // }
       }
   },
 
