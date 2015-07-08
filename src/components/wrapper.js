@@ -17,6 +17,7 @@ var Wrapper = React.createClass({
   },
 
   render: function() {
+
     var trainStationNodes = this.state.data.map(function (thisStationData) {
       // console.log(thisStationData);
       return (
@@ -25,7 +26,7 @@ var Wrapper = React.createClass({
     });
     return (
       <div id="wrapper">
-        <TrainStopsMenu stationName={this.state.data.station_name} lat={this.state.data.lat} long={this.state.data.long} data={this.state.data}></TrainStopsMenu>
+        <TrainStopsMenu position={this.state.data.position} stationName={this.state.data.station_name} lat={this.state.data.lat} long={this.state.data.long} data={this.state.data}></TrainStopsMenu>
         <div id='stationsWrapper'>
           {trainStationNodes}
         </div>

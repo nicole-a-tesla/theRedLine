@@ -143,6 +143,11 @@ ul {
   text-decoration: none;
 }
 
+.active {
+  background-color: black;
+  color: white;
+}
+
 .fakeButton:hover {
   background-color: black;
   color: white;
