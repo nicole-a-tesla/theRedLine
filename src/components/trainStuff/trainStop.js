@@ -45,6 +45,10 @@ var TrainStop = React.createClass({
 
   componentDidMount: function() {
     window.addEventListener('scroll', this.onScroll);
+
+    if (this.props.stopName == "Howard") {
+      $('#' + this.props.stopName + 'Menu a div').addClass('active');
+    }
   },
 
   render: function() {
