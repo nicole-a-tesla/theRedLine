@@ -1,5 +1,4 @@
 var React = require('react');
-var InstagramPostsByStop = require('./instagramPostsByStop');
 var InstagramList = require('./instagramList');
 
 var InstagramContainer = React.createClass({

@@ -6,6 +6,7 @@
     <title>Hello BUTTFACE</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
 
   </head>
   <body>
@@ -19,7 +20,21 @@
     <script>
       __REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__
     </script>
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
     <script type="text/javascript" src="assets/main.js"></script>
 
+
+    <script>
+      // get the viz.json url from the CartoDB Editor
+      // - click on visualize
+      // - create new visualization
+      // - make visualization public
+      // - click on publish
+      // - go to API tab
+
+      // window.onload = function() {
+      //   cartodb.createVis('map', 'https://nicole-a-tesla.cartodb.com/api/v2/viz/0713289c-2682-11e5-9584-0e49835281d6/viz.json');
+      // }
+    </script>
   </body>
 </html>
