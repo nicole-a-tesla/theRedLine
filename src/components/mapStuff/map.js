@@ -22,24 +22,22 @@ var Map = React.createClass({
   },
 
   moveTo: function() {
-    // console.log(ctaStops);
-    // debugger;
     this.nativeMap.panTo([ctaStops[this.state.position].lat, ctaStops[this.state.position].long + this.state.lonOffset], {animate: true, duration: 3});
     this.setState({position: this.state.position + 1});
     console.log("new position = " + this.state.position);
   },
 
-  grabRedLine: function() {
-    var sql = new cartodb.SQL({ user: 'nicole-a-tesla' });
-
-    sql.execute("SELECT * FROM parsed_stops", {format: 'geoJSON'})
-    .done(function(data) {
-      // console.log(data.rows);
-    })
-    .error(function(errors) {
-      console.log("errors:" + errors);
-    })
-  },
+//
+  // grabRedLine: function() {
+  //   var sql = new cartodb.SQL({ user: 'nicole-a-tesla' });
+  //
+  //   sql.execute("SELECT * FROM parsed_stops", {format: 'geoJSON'})
+  //   .done(function(data) {
+  //   })
+  //   .error(function(errors) {
+  //     console.log("errors:" + errors);
+  //   })
+  // },
 
   render: function() {
     return (
