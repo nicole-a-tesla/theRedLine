@@ -22,6 +22,7 @@ var Wrapper = React.createClass({
     return (
       <div id="wrapper">
         <Map data={this.state.data} />
+        <TrainStation data={ctaStops[0]}/>
       </div>
     );
   }
