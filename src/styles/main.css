@@ -45,26 +45,12 @@
 .fade-leave.fade-leave-active {
   opacity: 0.01;
 }*/
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-#stationsWrapper {
+/*#stationsWrapper {
   display: flex;
   -webkit-flex-flow: row;
-}
+}*/
 
-.trainStation {
-  min-width: 400px;
-  margin-top: 5%;
-}
-
-#wrapper {
-  white-space: nowrap;
-}
-
+/*
 #trainStopsBox {
   background-color: #CE072D;
   position: fixed;
@@ -81,6 +67,38 @@ a {
 
 .trainStop {
   display: inline-block;
+}*/
+/*.streetViewByStop {
+  padding: 0;
+  margin: 0;
+}*/
+
+/*.fakeButton {
+  background-color: white;
+  border-radius: 20px;
+  padding: 0px 9px;
+  margin: 0px 3px 0px 3px;
+  color: inherit;
+  text-decoration: none;
+}*/
+
+/*.active {
+  background-color: black;
+  color: white;
+}
+
+.fakeButton:hover {
+  background-color: black;
+  color: white;
+}*/
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#wrapper {
+  white-space: nowrap;
 }
 
 img.instagramImage {
@@ -117,11 +135,6 @@ ul.instagramList:hover img.instagramImage {
 
 }
 
-.streetViewByStop {
-  padding: 0;
-  margin: 0;
-}
-
 #instagramContainer {
 }
 
@@ -133,24 +146,6 @@ li {
 ul {
   list-style: none;
   display: inline-block;
-}
-.fakeButton {
-  background-color: white;
-  border-radius: 20px;
-  padding: 0px 9px;
-  margin: 0px 3px 0px 3px;
-  color: inherit;
-  text-decoration: none;
-}
-
-.active {
-  background-color: black;
-  color: white;
-}
-
-.fakeButton:hover {
-  background-color: black;
-  color: white;
 }
 
 #map {
@@ -181,4 +176,15 @@ html {
 #wrapper {
   width: 100%;
   height: 100%;
+}
+
+.trainStation {
+  width: 40%;
+  background-color: aquamarine;
+  height: 100%;
+  opacity:0.2;
+  z-index: 10;
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
