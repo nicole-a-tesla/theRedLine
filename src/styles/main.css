@@ -179,10 +179,10 @@ html {
 }
 
 .trainStation {
-  width: 40%;
+  width: 50%;
   background-color: aquamarine;
   height: 100%;
-  opacity:0.2;
+  /*opacity:0.2;*/
   z-index: 10;
   position: absolute;
   top: 0px;
