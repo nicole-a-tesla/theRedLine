@@ -14,6 +14,7 @@ var TrainStation = React.createClass({
     console.log(ctaStops[this.props.position].station_name);
     return (
       <div className='trainStation' id={ctaStops[this.props.position].station_name}>
+        <StreetViewContainer className={'streetViewContainer'} data={ctaStops[this.props.position]} />
 
       </div>
     );
@@ -21,5 +22,4 @@ var TrainStation = React.createClass({
 });
 
 module.exports = TrainStation;
-        // <StreetViewContainer className={'streetViewContainer' + this.props.data.station_name} stationName={this.props.data.station_name} lat={this.props.data.lat} long={this.props.data.long} data={this.props.data} />
         // <InstagramContainer className={'instagramContainer' + this.props.data.station_name} stationName={this.props.data.station_name} lat={this.props.data.lat} long={this.props.data.long} data={this.props.data} />
