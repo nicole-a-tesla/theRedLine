@@ -1,6 +1,7 @@
 var React = require('react');
 var StreetViewContainer = require('./streetViewStuff/streetViewContainer');
 var InstagramContainer = require('./instagramStuff/instagramContainer');
+var ctaStops =  require('./ctaStops');
 var $ = require('jquery');
 
 var TrainStation = React.createClass({
@@ -10,9 +11,10 @@ var TrainStation = React.createClass({
   },
 
   render: function() {
-      console.log(this.props.data.station_name);
+    console.log(ctaStops[this.props.position].station_name);
     return (
-      <div className='trainStation' id={this.props.data.station_name}>
+      <div className='trainStation' id={ctaStops[this.props.position].station_name}>
+
       </div>
     );
   }

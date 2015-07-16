@@ -11,18 +11,22 @@ var Wrapper = React.createClass({
   },
 
   getInitialState: function() {
-    return {data:ctaStops};
+    return {data:ctaStops, position: 0};
   },
 
   componentDidMount: function() {
+  },
+
+  stationChange: function(newPosition){
+    this.setState({position: newPosition})
   },
 
   render: function() {
 
     return (
       <div id="wrapper">
-        <Map data={this.state.data} />
-        <TrainStation data={this.state.data}/>
+        <Map onStationChange={this.stationChange} data={this.state.data} />
+        <TrainStation data={this.state.data} position={this.state.position}/>
       </div>
     );
   }
