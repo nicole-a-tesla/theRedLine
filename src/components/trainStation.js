@@ -6,10 +6,11 @@ var $ = require('jquery');
 var TrainStation = React.createClass({
 
   getInitialState: function() {
-    return {}
+    return {position: 0, stationData: this.props.data[0]}
   },
 
   render: function() {
+      console.log(this.props.data.station_name);
     return (
       <div className='trainStation' id={this.props.data.station_name}>
       </div>

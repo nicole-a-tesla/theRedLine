@@ -26,34 +26,34 @@ var Map = React.createClass({
   },
 
   moveDown: function() {
-    console.log('current station = ' + ctaStops[this.state.position].station_name + ' at position = ' + this.state.position);
+    // console.log('current station = ' + ctaStops[this.state.position].station_name + ' at position = ' + this.state.position);
 
     console.log('traveling to station = ' + ctaStops[this.state.position + 1].station_name + ' at position = ');
-    console.log(this.state.position + 1);
+    // console.log(this.state.position + 1);
 
     var newLat = ctaStops[this.state.position + 1].lat;
     var newLong = ctaStops[this.state.position + 1].long + this.state.lonOffset;
 
-    this.nativeMap.panTo([newLat, newLong], {animate: true, duration: 3});
+    this.nativeMap.panTo([newLat, newLong], {animate: true, duration: 2});
     this.setState({position: this.state.position + 1});
     // console.log("Moved Down. new position = " + this.state.position);
   },
 
   moveUp: function() {
-    console.log('current station = ' + ctaStops[this.state.position].station_name + ' at position = ' + this.state.position);
+    // console.log('current station = ' + ctaStops[this.state.position].station_name + ' at position = ' + this.state.position);
 
     console.log('traveling to station = ' + ctaStops[this.state.position - 1].station_name + ' at position = ');
-    console.log(this.state.position - 1);
+    // console.log(this.state.position - 1);
 
 
     var newLat = ctaStops[this.state.position - 1].lat;
     var newLong = ctaStops[this.state.position - 1].long + this.state.lonOffset;
 
-    this.nativeMap.panTo([newLat, newLong], {animate: true, duration: 3});
+    this.nativeMap.panTo([newLat, newLong], {animate: true, duration: 2});
 
 
     this.setState({position: this.state.position - 1});
-    console.log("Moved up. new position = " + this.state.position);
+    // console.log("Moved up. new position = " + this.state.position);
   },
 
   onWheel: function(e) {
