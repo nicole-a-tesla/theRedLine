@@ -22,6 +22,7 @@ var Wrapper = React.createClass({
   },
 
   render: function() {
+    console.log(ctaStops[this.props.position].station_name);
 
     return (
       <div id="wrapper">

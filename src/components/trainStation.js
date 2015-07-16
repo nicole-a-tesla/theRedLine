@@ -11,7 +11,7 @@ var TrainStation = React.createClass({
   },
 
   render: function() {
-    console.log(ctaStops[this.props.position].station_name);
+
     return (
       <div className='trainStation' id={ctaStops[this.props.position].station_name}>
         <StreetViewContainer className={'streetViewContainer'} data={ctaStops[this.props.position]} />
