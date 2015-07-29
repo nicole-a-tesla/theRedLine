@@ -16,6 +16,7 @@ var InstagramList = React.createClass({
         dataType: 'jsonp',
 
         success: function(data) {
+          console.log('SUCCESSFUL INSTAGRAM GET');
           var newUrls = []
 
           // temp limit to 12 images:
@@ -32,6 +33,7 @@ var InstagramList = React.createClass({
 
         }.bind(this),
         error: function(xhr, status, err) {
+          console.log("INSTAGRAM FAIL");
           console.error(this.props.url, status, err.toString());
         }.bind(this)
     });
@@ -41,7 +43,12 @@ var InstagramList = React.createClass({
     this.loadInstagramData();
   },
 
+  // componentDidUpdate: function() {
+    // this.loadInstagramData();
+  // },
+
   render: function() {
+    console.log('RENDERING INSTAGRAM LIST');
     var instagramNodes = this.state.urls.map(function (imageUrl) {
       return (
         <InstagramImage imageUrl={imageUrl}></InstagramImage>
