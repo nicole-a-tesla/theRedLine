@@ -4,7 +4,6 @@ var React = require('react');
 var InstagramImage = React.createClass({
 
   render: function() {
-    // console.log('RENDERING INSTAGRAM IMAGE');
     return (
       <li className="instagramImageListItem">
         <img className="instagramImage" src={this.props.imageUrl} alt="Instagram picture"/>
