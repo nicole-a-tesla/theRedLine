@@ -40,15 +40,14 @@ var InstagramList = React.createClass({
   },
 
   componentDidMount: function() {
+    console.log('calling componentDidMount!');
     this.loadInstagramData();
   },
 
-  // componentDidUpdate: function() {
-    // this.loadInstagramData();
-  // },
-
   render: function() {
     console.log('RENDERING INSTAGRAM LIST');
+    console.log('this.props.data = ');
+    console.log(this.props.data);
     var instagramNodes = this.state.urls.map(function (imageUrl) {
       return (
         <InstagramImage imageUrl={imageUrl}></InstagramImage>
