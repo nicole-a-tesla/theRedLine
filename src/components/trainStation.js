@@ -17,7 +17,7 @@ var TrainStation = React.createClass({
       <div className='trainStation' id={ctaStops[this.props.position].station_name}>
         <StreetViewContainer className={'streetViewContainer'} data={ctaStops[this.props.position]} />
         <InstagramContainer className={'instagramContainer'} data={ctaStops[this.props.position]} />
-        <IncomeVis ctaData={ctaStops[this.props.position]} />
+        <IncomeVis data={ctaStops[this.props.position]} />
       </div>
     );
   }
