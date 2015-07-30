@@ -121,17 +121,17 @@ ul.instagramList {
   -webkit-flex-flow: row wrap;
 }
 
-ul.instagramList:hover {
+ul.instagramList {
   -webkit-flex-flow: row wrap;
   max-width: none;
   min-width: 4800px;
 }
 
-ul.instagramList:hover img.instagramImage {
+ul.instagramList img.instagramImage {
   /* transform into row of full-sized images */
   max-width: none;
-  width: 400px;
-  height: 400px;
+  width: 100px;
+  height: 100px;
 
 }
 
