@@ -10,7 +10,7 @@ var IncomeVis = React.createClass({
     // console.log(incomeData[this.props.data.neighborhood]);
     return (
       <div>
-        <p>Hello!</p>
+        <p>I should have an svg under me!</p>
         <script type="text/javascript">
           var svgW = 100;
           var svgH = 100;
