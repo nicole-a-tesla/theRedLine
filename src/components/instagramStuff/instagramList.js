@@ -42,8 +42,8 @@ var InstagramList = React.createClass({
     });
   },
 
-  componentDidMount: function() {
-    console.log('calling componentDidMount!');
+  componentWillReceiveProps: function() {
+    console.log('calling componentWillReceiveProps!');
     this.loadInstagramData();
   },
 
