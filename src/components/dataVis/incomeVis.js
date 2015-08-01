@@ -6,7 +6,7 @@ var IncomeVis = React.createClass({
 
   render: function() {
 
-    console.log('INCOME VIS -->');
+    // console.log('INCOME VIS -->');
     // console.log(incomeData[this.props.data.neighborhood]);
     return (
       <div>
@@ -30,7 +30,7 @@ var IncomeVis = React.createClass({
               .attr('cx', 50)
               .attr('cy', 50)
               .attr('r', function(d) {
-                return d /10; // React is all kinds of :( about this return
+                // return d /10; // React is all kinds of :( about this return
               });
         </script>
       </div>
