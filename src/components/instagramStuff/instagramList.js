@@ -1,7 +1,6 @@
 var React = require('react');
 var InstagramImage = require('./instagramImage')
 var $ = require("jquery")
-// list of individual images for a given stop. iterate through and make em
 var InstagramList = React.createClass({
 
   getInitialState: function() {
@@ -16,36 +15,37 @@ var InstagramList = React.createClass({
         dataType: 'jsonp',
 
         success: function(data) {
-          // console.log('SUCCESSFUL INSTAGRAM GET');
+          console.log('SUCCESSFUL INSTAGRAM GET');
           var newUrls = []
 
-          // temp limit to 12 images:
-          // for (var i = 0; i < data["data"].length; i++) {
-          for (var i = 0; i < 12; i++) {
-            if (data["data"][i]["images"]) { // make sure there's 12 images. we'll do this less jankily later
-              newUrls.push(data["data"][i]["images"]["standard_resolution"]["url"]);
-            } else {
-              newUrls.push(data["data"][i-1]["images"]["standard_resolution"]["url"]); // repeat last image if there aren't enough. to be seriously de-janked at a future date
-            }
-          }
+      // temp limit to 12 images:
+      // for (var i = 0; i < data["data"].length; i++) {
+          // for (var i = 0; i < 12; i++) {
+          //   if (data["data"][i]["images"]) { // make sure there's 12 images. we'll do this less jankily later
+          //     newUrls.push(data["data"][i]["images"]["standard_resolution"]["url"]);
+          //   } else {
+          //     newUrls.push(data["data"][i-1]["images"]["standard_resolution"]["url"]); // repeat last image if there aren't enough. to be seriously de-janked at a future date
+          //   }
+          // }
 
           this.setState({ urls: newUrls });
 
         }.bind(this),
+
         error: function(xhr, status, err) {
-          // console.log("INSTAGRAM FAIL");
+          console.log("INSTAGRAM FAIL");
           console.error(this.props.url, status, err.toString());
         }.bind(this)
     });
   },
 
   componentDidMount: function() {
-    // console.log('calling componentDidMount!');
+    console.log('calling componentDidMount!');
     this.loadInstagramData();
   },
 
   render: function() {
-    // console.log('RENDERING INSTAGRAM LIST');
+    console.log('RENDERING INSTAGRAM LIST');
     // console.log('this.props.data = ');
     // console.log(this.props.data);
     var instagramNodes = this.state.urls.map(function (imageUrl) {
