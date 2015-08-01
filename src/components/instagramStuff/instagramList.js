@@ -4,7 +4,6 @@ var $ = require("jquery")
 var InstagramList = React.createClass({
 
   getInitialState: function() {
-    // console.log('getting initial ');
     return  {urls: []}
   },
 
@@ -16,7 +15,6 @@ var InstagramList = React.createClass({
         dataType: 'jsonp',
 
         success: function(data) {
-          console.log('SUCCESSFUL INSTAGRAM GET');
           var newUrls = []
 
           for (var i = 0; i < data["data"].length; i++) {
@@ -43,15 +41,10 @@ var InstagramList = React.createClass({
   },
 
   componentWillReceiveProps: function() {
-    console.log('calling componentWillReceiveProps!');
     this.loadInstagramData();
   },
 
   render: function() {
-    console.log('RENDERING INSTAGRAM LIST');
-
-
-// cant put this.loadInstagramData(); here! infinite loop :(
 
     var instagramNodes = this.state.urls.map(function (imageUrl) {
       return (
