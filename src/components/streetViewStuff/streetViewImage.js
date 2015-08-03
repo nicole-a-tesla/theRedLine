@@ -2,55 +2,19 @@ var React = require('react');
 
 var StreetViewImage = React.createClass({
 
-  loadStreetView: function() {
-    var trainStation = new google.maps.LatLng(this.props.lat, this.props.long);
-    var panoramaOptions = {
-      position: trainStation,
-      pov: {
-        heading: 165,
-        pitch: 0
-      },
-      zoom: 1
-    };
-
-    var myPano = new google.maps.StreetViewPanorama(
-      document.getElementById('streetview-canvas'),
-      panoramaOptions);
-    myPano.setVisible(true);
-  },
-
-  componentDidMount: function() {
-    this.loadStreetView();
-  },
-
   render: function() {
+    console.log(this.props.long);
     return (
-      <div id="streetview-canvas"></div>
+      <iframe
+        width="100%"
+        height="150"
+        frameborder="0"
+        src={"https://www.google.com/maps/embed/v1/streetview?key=AIzaSyBU2ArHRLAJwCb8Akp_ieojJMoM_92XaHk&location=" + this.props.lat + "," + this.props.long} >
+      </iframe>
     );
   }
-
+  
 });
-
-
-//
-// function initialize() {
-//   var bryantPark = new google.maps.LatLng(37.869260, -122.254811);
-//   var panoramaOptions = {
-//     position: bryantPark,
-//     pov: {
-//       heading: 165,
-//       pitch: 0
-//     },
-//     zoom: 1
-//   };
-//   var myPano = new google.maps.StreetViewPanorama(
-//       document.getElementById('map-canvas'),
-//       panoramaOptions);
-//   myPano.setVisible(true);
-// }
-//
-// google.maps.event.addDomListener(window, 'load', initialize);
-
 
 //   render: function() {
 //     return (
