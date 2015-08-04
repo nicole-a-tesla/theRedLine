@@ -62,7 +62,7 @@ var RaceVis = React.createClass({
     setTimeout(function () {
       chart.load({
         columns: [
-            raceData[neighborhood][0]
+            raceData[neighborhood][0],
             raceData[neighborhood][1],
             raceData[neighborhood][2],
             raceData[neighborhood][3],
