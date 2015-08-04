@@ -1,20 +1,40 @@
+// median
 module.exports={
-  'Rogers Park': 23939,
-  'Edgewater': 33385,
-  'Uptown': 35787,
-  'Lakeview': 60058,
-  'Lincoln Park': 71551,
-  'Near North Side': 88669,
-  'Loop': 65526,
-  'Near South Side': 59077,
-  'Armour Square': 16148,
-  'Fuller Park': 10432,
-  'Englewood': 11888,
-  'Greater Grand Crossing': 17285,
-  'Chatham': 18881,
-  'Roseland': 17949
+  'Rogers Park': 39482,
+  'Edgewater': 43331,
+  'Uptown': 40324,
+  'Lakeview': 70746,
+  'Lincoln Park': 82707,
+  'Near North Side': 76290,
+  'Loop': 78124,
+  'Near South Side': 75995,
+  'Armour Square': 27619,
+  'Fuller Park': 15086,
+  'Englewood': 19743,
+  'Greater Grand Crossing': 29663,
+  'Chatham': 32057,
+  'Roseland': 40142
   }
 
+// per capita
+// module.exports={
+//   'Rogers Park': 23939,
+//   'Edgewater': 33385,
+//   'Uptown': 35787,
+//   'Lakeview': 60058,
+//   'Lincoln Park': 71551,
+//   'Near North Side': 88669,
+//   'Loop': 65526,
+//   'Near South Side': 59077,
+//   'Armour Square': 16148,
+//   'Fuller Park': 10432,
+//   'Englewood': 11888,
+//   'Greater Grand Crossing': 17285,
+//   'Chatham': 18881,
+//   'Roseland': 17949
+//   }
+
+// rest of city 
   // 'West Ridge': '23040',
   // 'North Center': '57123',
   // 'Edison Park': '40959',
