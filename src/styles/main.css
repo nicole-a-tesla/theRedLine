@@ -97,6 +97,23 @@ a {
   color: inherit;
 }
 
+text.c3-chart-arcs-title {
+  dominant-baseline: middle;
+  font-size: 1.3em;
+  stroke: white;
+  shape-rendering: crispEdges;
+  }
+
+.c3-legend-item {
+  stroke: white;
+  border: none;
+}
+
+/*svg {
+  width: 250px;
+  height: 250px;
+}*/
+
 #wrapper {
   white-space: nowrap;
 }

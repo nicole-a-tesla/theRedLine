@@ -10,13 +10,17 @@ var RaceVis = React.createClass({
     var neighborhood = this.props.data.neighborhood;
     var position = this.props.data.position;
 
-    // this doesn't work for going backward....!!!
+    // this doesn't work for going backward....
     var lastNeighborhood = position == 0 ? neighborhood : ctaStops[position - 1]['neighborhood']
 
     console.log('last one was...');
     console.log(lastNeighborhood);
 
     var chart = c3.generate({
+      size: {
+        height: 240,
+        width: 480
+      },
       bindto: "#race",
       data: {
         columns: [
@@ -25,6 +29,19 @@ var RaceVis = React.createClass({
             raceData[lastNeighborhood][2],
             raceData[lastNeighborhood][3],
             raceData[lastNeighborhood][4]
+            //
+            // ['White', 0],
+            // ['Black', 0],
+            // ['Latin@', 0],
+            // ['Asian', 0],
+            // ['Other', 0]
+
+            // raceData[neighborhood][0],
+            // raceData[neighborhood][1],
+            // raceData[neighborhood][2],
+            // raceData[neighborhood][3],
+            // raceData[neighborhood][4]
+
         ],
         type : 'donut',
 
@@ -33,7 +50,7 @@ var RaceVis = React.createClass({
         onmouseout: function (d, i) { console.log("onmouseout", d, i); }
       },
       donut: {
-        title: 'title'
+        title: this.props.data.neighborhood
       }
     });
 
@@ -52,16 +69,16 @@ var RaceVis = React.createClass({
             raceData[neighborhood][4]
         ]
       });
-    }, 1500);
+    }, 1000);
 
-    setTimeout(function () {
+    // setTimeout(function () {
       // chart.unload({
-      //   ids: 'Demographics'
+      //   ids: ''
       // });
       // chart.unload({
-      //   ids: 'data2'
+      //   ids: ''
       // });
-    }, 2500);
+    // }, 2500);
   },
 
   componentDidMount: function() {
