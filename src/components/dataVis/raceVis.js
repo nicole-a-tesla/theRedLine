@@ -62,14 +62,36 @@ var RaceVis = React.createClass({
     setTimeout(function () {
       chart.load({
         columns: [
-            raceData[neighborhood][0],
+            raceData[neighborhood][0]
             raceData[neighborhood][1],
             raceData[neighborhood][2],
             raceData[neighborhood][3],
             raceData[neighborhood][4]
         ]
       });
-    }, 1000);
+    }, 1500);
+    // }, 750);
+    // setTimeout(function () {
+    //   chart.load({
+    //     columns: [
+    //         raceData[neighborhood][1]
+    //     ]
+    //   });
+    // }, 1000);
+    // setTimeout(function () {
+    //   chart.load({
+    //     columns: [
+    //         raceData[neighborhood][2]
+    //     ]
+    //   });
+    // }, 1250);
+    // setTimeout(function () {
+    //   chart.load({
+    //     columns: [
+    //         raceData[neighborhood][3]
+    //     ]
+    //   });
+    // }, 1500);
 
     // setTimeout(function () {
       // chart.unload({
