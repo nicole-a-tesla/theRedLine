@@ -180,7 +180,7 @@ html {
 
 .trainStation {
   width: 50%;
-  background-color: aquamarine;
+  background-color: rgba(0,0,0,0.2);
   height: 100%;
   /*opacity:0.2;*/
   z-index: 10;
