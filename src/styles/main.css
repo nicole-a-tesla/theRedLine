@@ -117,14 +117,15 @@ ul.instagramList {
   overflow: scroll;
 
   display: flex;
-  flex-flow: row-wrap;
-  -webkit-flex-flow: row wrap;
+  /*flex-flow: row-wrap;
+  -webkit-flex-flow: row no-wrap;*/
+  overflow-x: scroll;
 }
 
 ul.instagramList {
-  -webkit-flex-flow: row wrap;
+  -webkit-flex-flow: row nowrap;
   max-width: none;
-  min-width: 4800px;
+  /*min-width: 4800px;*/
 }
 
 ul.instagramList img.instagramImage {
