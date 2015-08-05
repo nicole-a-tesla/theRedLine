@@ -43,6 +43,16 @@ var RaceVis = React.createClass({
             // raceData[neighborhood][4]
 
         ],
+        // color: {
+        //   pattern: [ '#1f77b4', '#ff7f0e', '#2ca02c', '#9467bd', '#8c564b' ]
+        // },
+        colors: {
+              'White': '#1f77b4',
+              'Black': '#ff7f0e',
+              'Latin@': '#2ca02c',
+              'Asian': '#9467bd',
+              'Other': '#8c564b',
+        },
         type : 'donut',
 
         onclick: function (d, i) { console.log("onclick", d, i); },
