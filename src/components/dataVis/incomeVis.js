@@ -9,8 +9,8 @@ var IncomeVis = React.createClass({
 
     var chart = c3.generate({
       size: {
-        height: 400,
-        width: 90
+        height: 250,
+        width: 200
       },
       // axis: {
       //   rotated: true

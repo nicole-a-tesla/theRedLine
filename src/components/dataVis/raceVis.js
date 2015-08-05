@@ -18,7 +18,7 @@ var RaceVis = React.createClass({
 
     var chart = c3.generate({
       size: {
-        height: 240,
+        height: 250,
         width: 400
       },
       bindto: "#race",
