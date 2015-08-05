@@ -43,9 +43,6 @@ var RaceVis = React.createClass({
             // raceData[neighborhood][4]
 
         ],
-        // color: {
-        //   pattern: [ '#1f77b4', '#ff7f0e', '#2ca02c', '#9467bd', '#8c564b' ]
-        // },
         colors: {
               'White': '#1f77b4',
               'Black': '#ff7f0e',
@@ -80,28 +77,7 @@ var RaceVis = React.createClass({
         ]
       });
     }, 1500);
-    // }, 750);
-    // setTimeout(function () {
-    //   chart.load({
-    //     columns: [
-    //         raceData[neighborhood][1]
-    //     ]
-    //   });
-    // }, 1000);
-    // setTimeout(function () {
-    //   chart.load({
-    //     columns: [
-    //         raceData[neighborhood][2]
-    //     ]
-    //   });
-    // }, 1250);
-    // setTimeout(function () {
-    //   chart.load({
-    //     columns: [
-    //         raceData[neighborhood][3]
-    //     ]
-    //   });
-    // }, 1500);
+
 
     // setTimeout(function () {
       // chart.unload({
