@@ -18,8 +18,8 @@ var RaceVis = React.createClass({
 
     var chart = c3.generate({
       size: {
-        height: 240,
-        width: 480
+        height: 250,
+        width: 400
       },
       bindto: "#race",
       data: {
@@ -43,6 +43,13 @@ var RaceVis = React.createClass({
             // raceData[neighborhood][4]
 
         ],
+        colors: {
+              'White': '#1f77b4',
+              'Black': '#ff7f0e',
+              'Latin@': '#2ca02c',
+              'Asian': '#9467bd',
+              'Other': '#8c564b',
+        },
         type : 'donut',
 
         onclick: function (d, i) { console.log("onclick", d, i); },
@@ -62,7 +69,7 @@ var RaceVis = React.createClass({
     setTimeout(function () {
       chart.load({
         columns: [
-            raceData[neighborhood][0]
+            raceData[neighborhood][0],
             raceData[neighborhood][1],
             raceData[neighborhood][2],
             raceData[neighborhood][3],
@@ -70,28 +77,7 @@ var RaceVis = React.createClass({
         ]
       });
     }, 1500);
-    // }, 750);
-    // setTimeout(function () {
-    //   chart.load({
-    //     columns: [
-    //         raceData[neighborhood][1]
-    //     ]
-    //   });
-    // }, 1000);
-    // setTimeout(function () {
-    //   chart.load({
-    //     columns: [
-    //         raceData[neighborhood][2]
-    //     ]
-    //   });
-    // }, 1250);
-    // setTimeout(function () {
-    //   chart.load({
-    //     columns: [
-    //         raceData[neighborhood][3]
-    //     ]
-    //   });
-    // }, 1500);
+
 
     // setTimeout(function () {
       // chart.unload({

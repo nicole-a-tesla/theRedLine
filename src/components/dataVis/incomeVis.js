@@ -4,32 +4,56 @@ var incomeData = require('../incomeData')
 
 var IncomeVis = React.createClass({
 
+  makeAChart: function() {
+    var neighborhood = this.props.data.neighborhood;
+
+    var chart = c3.generate({
+      size: {
+        height: 250,
+        width: 200
+      },
+      // axis: {
+      //   rotated: true
+      // },
+      bindto: "#income",
+      data: {
+        columns: [
+          ['Chicago', 47270]
+      ],
+        type: 'bar'
+      },
+      color: {
+        pattern: [ '#7f7f7f', '#d62728' ]
+      },
+
+      bar: {
+        width: {
+          ratio: 0.5 // this makes bar width 50% of length between ticks
+        }
+          // or
+      // width: 100 // this makes bar width 100px
+      }
+    });
+
+    setTimeout(function () {
+      chart.load({
+        columns: [
+          [neighborhood, incomeData[neighborhood]],
+        ]
+      });
+    }, 300);
+
+  },
+
   componentDidMount: function() {
-    // var svgW = 100;
-    // var svgH = 100;
-    // var padding = 0;
-    //
-    // var dataset = incomeData[this.props.data.neighborhood];
-    //
-    // var svg = d3.select('#income')
-    //             .append('svg')
-    //             .attr('width', svgW)
-    //             .attr('height', svgH);
-    //
-    // svg.selectAll('circle')
-    //     .data(dataset)
-    //     .enter()
-    //     .append('circle')
-    //     .attr('cx', 50)
-    //     .attr('cy', 50)
-    //     .attr('r', function(d) {
-    //       return d; // React is all kinds of sad about this return
-    //     });
+    this.makeAChart();
+  },
+
+  componentDidUpdate: function() {
+    this.makeAChart();
   },
 
   render: function() {
-    // console.log('INCOME VIS -->');
-    // console.log(incomeData[this.props.data.neighborhood]);
     return (
       <div id="income"></div>
     )
