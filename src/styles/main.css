@@ -206,3 +206,17 @@ html {
   top: 0px;
   right: 0px;
 }
+
+.dataVis {
+  display: flex;
+  -webkit-flex-flow: row;
+}
+
+#income {
+  display: inline-block;
+}
+
+#race {
+  display: inline-block;
+  
+}
