@@ -122,10 +122,6 @@ text.c3-chart-arcs-title {
   /*overflow: scroll;*/
 }
 
-.instagramImageListItem {
-  margin: 0;
-}
-
 ul.instagramList {
   padding: 0;
   margin: 0;
@@ -135,20 +131,29 @@ ul.instagramList {
 
   width: 100%;
 
-  display: flex;
+  position: relative;
   -webkit-flex-flow: row nowrap;
 
+  display: block;
+  height: 200px;
+  width: 100%;
+
+}
+
+.instagramImageListItem {
+  margin: 0;
+  display: inline-block;
 }
 
 img.instagramImage {
   max-width: none;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
 
 }
 
 li.instagramImageListItem img.instagramImage {
-  margin-right: 726px !important;
+  /*margin-right: 726px !important;*/
 
 }
 
@@ -206,6 +211,7 @@ html {
 .dataVis {
   display: flex;
   -webkit-flex-flow: row;
+  margin-top: 30px;
 }
 
 #income {
