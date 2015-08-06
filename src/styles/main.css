@@ -118,8 +118,8 @@ text.c3-chart-arcs-title {
   white-space: nowrap;
 }
 
-img.instagramImage {
-  max-width: 100px;
+#instagramContainer {
+  /*overflow: scroll;*/
 }
 
 .instagramImageListItem {
@@ -129,31 +129,27 @@ img.instagramImage {
 ul.instagramList {
   padding: 0;
   margin: 0;
-  min-width: 400px;
-  max-width: 400px;
+
   overflow: scroll;
+  overflow-x: auto;
+
+  width: 100%;
 
   display: flex;
-  /*flex-flow: row-wrap;
-  -webkit-flex-flow: row no-wrap;*/
-  overflow-x: scroll;
-}
-
-ul.instagramList {
   -webkit-flex-flow: row nowrap;
-  max-width: none;
-  /*min-width: 4800px;*/
-}
-
-ul.instagramList img.instagramImage {
-  /* transform into row of full-sized images */
-  max-width: none;
-  width: 100px;
-  height: 100px;
 
 }
 
-#instagramContainer {
+img.instagramImage {
+  max-width: none;
+  width: 150px;
+  height: 150px;
+
+}
+
+li.instagramImageListItem img.instagramImage {
+  margin-right: 726px !important;
+
 }
 
 li {
@@ -218,5 +214,5 @@ html {
 
 #race {
   display: inline-block;
-  
+
 }
