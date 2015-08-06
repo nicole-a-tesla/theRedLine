@@ -7,13 +7,13 @@ var StreetViewImage = React.createClass({
     return (
       <iframe
         width="100%"
-        height="150"
+        height="200"
         frameborder="0"
         src={"https://www.google.com/maps/embed/v1/streetview?key=AIzaSyBU2ArHRLAJwCb8Akp_ieojJMoM_92XaHk&location=" + this.props.lat + "," + this.props.long} >
       </iframe>
     );
   }
-  
+
 });
 
 //   render: function() {

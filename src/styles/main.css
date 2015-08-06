@@ -118,42 +118,43 @@ text.c3-chart-arcs-title {
   white-space: nowrap;
 }
 
-img.instagramImage {
-  max-width: 100px;
-}
-
-.instagramImageListItem {
-  margin: 0;
+#instagramContainer {
+  /*overflow: scroll;*/
 }
 
 ul.instagramList {
   padding: 0;
   margin: 0;
-  min-width: 400px;
-  max-width: 400px;
+
   overflow: scroll;
+  overflow-x: auto;
 
-  display: flex;
-  /*flex-flow: row-wrap;
-  -webkit-flex-flow: row no-wrap;*/
-  overflow-x: scroll;
-}
+  width: 100%;
 
-ul.instagramList {
+  position: relative;
   -webkit-flex-flow: row nowrap;
-  max-width: none;
-  /*min-width: 4800px;*/
-}
 
-ul.instagramList img.instagramImage {
-  /* transform into row of full-sized images */
-  max-width: none;
-  width: 100px;
-  height: 100px;
+  display: block;
+  height: 200px;
+  width: 100%;
 
 }
 
-#instagramContainer {
+.instagramImageListItem {
+  margin: 0;
+  display: inline-block;
+}
+
+img.instagramImage {
+  max-width: none;
+  width: 200px;
+  height: 200px;
+
+}
+
+li.instagramImageListItem img.instagramImage {
+  /*margin-right: 726px !important;*/
+
 }
 
 li {
@@ -210,6 +211,7 @@ html {
 .dataVis {
   display: flex;
   -webkit-flex-flow: row;
+  margin-top: 30px;
 }
 
 #income {
@@ -218,5 +220,5 @@ html {
 
 #race {
   display: inline-block;
-  
+
 }

@@ -9,7 +9,7 @@ var InstagramList = React.createClass({
 
   loadInstagramData: function(event) {
     $.ajax({
-      url: "https://api.instagram.com/v1/media/search?lat=" + this.props.data.lat + "&lng=" + this.props.data.long + "&distance=1000&client_id=fbd7e0b57e2744d99de340fe10de9dbe",
+      url: "https://api.instagram.com/v1/media/search?lat=" + this.props.data.lat + "&lng=" + this.props.data.long + "&distance=1500&client_id=fbd7e0b57e2744d99de340fe10de9dbe",
         type: "GET",
         cache: false,
         dataType: 'jsonp',
