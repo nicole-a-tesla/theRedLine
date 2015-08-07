@@ -220,5 +220,19 @@ html {
 
 #race {
   display: inline-block;
+}
 
+
+.c3-legend-item {
+  shape-rendering: crispEdges;
+  font-weight: 100;
+}
+
+rect {
+    stroke-opacity: 0;
+}
+
+.c3-chart-arcs-title {
+  fill: white;
+  font-weight: 100;
 }
