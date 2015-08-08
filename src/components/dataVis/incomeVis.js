@@ -41,7 +41,7 @@ var IncomeVis = React.createClass({
           [neighborhood, incomeData[neighborhood]],
         ]
       });
-    }, 300);
+    }, 1000);
 
   },
 
