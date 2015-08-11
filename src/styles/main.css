@@ -217,6 +217,10 @@ html {
 #income {
   display: inline-block;
   margin-left: 20px;
+
+  stroke: white;
+  fill: white;
+  font-weight: 100;
 }
 
 #race {
