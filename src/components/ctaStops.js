@@ -28,7 +28,7 @@ module.exports=[ { "stop_id": 30173,
     "neighborhood":"Edgewater",
     "lat": 41.9945539,
     "long": -87.6594107,
-    'heading': 210
+    'heading': 130
     },
   { "stop_id": 30170,
     "position": 5,
