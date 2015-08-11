@@ -7,7 +7,6 @@ var TrainStop = React.createClass({
 
   handleClick: function(event) {
     var stopName = '#' + this.props.stopName;
-    console.log('stopName = ' + stopName);
 
     var trainStationDiv = $(stopName)
 
