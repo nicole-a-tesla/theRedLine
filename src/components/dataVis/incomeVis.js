@@ -41,8 +41,11 @@ var IncomeVis = React.createClass({
         }
           // or
       // width: 100 // this makes bar width 100px
-      }
-    });
+    },
+    tooltip: {
+      show: false
+    }
+  });
 
     setTimeout(function () {
       chart.load({
