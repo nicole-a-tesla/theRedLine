@@ -13,8 +13,8 @@ var RaceVis = React.createClass({
     // this doesn't work for going backward....
     var lastNeighborhood = position == 0 ? neighborhood : ctaStops[position - 1]['neighborhood']
 
-    console.log('last one was...');
-    console.log(lastNeighborhood);
+    // console.log('last one was...');
+    // console.log(lastNeighborhood);
 
     var chart = c3.generate({
       size: {
@@ -90,9 +90,9 @@ var RaceVis = React.createClass({
       }
     });
 
-    console.log('station_name = ');
-    console.log(station_name);
-    console.log(raceData['Rogers Park']);
+    // console.log('station_name = ');
+    // console.log(station_name);
+    // console.log(raceData['Rogers Park']);
 
 
     setTimeout(function () {
