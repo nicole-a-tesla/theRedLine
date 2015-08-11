@@ -4,9 +4,10 @@ var StreetViewImage = require('./streetViewImage');
 var StreetViewContainer = React.createClass({
 
   render: function() {
-
+    console.log('in StreetViewContainer. this.props.data = ');
+    console.log(this.props.data);
     return (
-      <StreetViewImage lat={this.props.data.lat} long={this.props.data.long} />
+      <StreetViewImage data={this.props.data} />
     );
   }
 });
