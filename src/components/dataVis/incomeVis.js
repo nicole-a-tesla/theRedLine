@@ -12,9 +12,18 @@ var IncomeVis = React.createClass({
         height: 250,
         width: 200
       },
-      // axis: {
-      //   rotated: true
-      // },
+      axis: {
+        y: {
+            type: 'category',
+            tick: {
+                culling: {
+                    max: 3 // the number of tick texts will be adjusted to less than this value
+                }
+                // for normal axis, default on
+                // for category axis, default off
+            }
+        }
+    },
       bindto: "#income",
       data: {
         columns: [
@@ -41,7 +50,7 @@ var IncomeVis = React.createClass({
           [neighborhood, incomeData[neighborhood]],
         ]
       });
-    }, 1000);
+    }, 1300);
 
   },
 
