@@ -15,6 +15,10 @@ var StreetViewImage = React.createClass({
                 + this.props.data.long
                 + "&heading="
                 + this.props.data.heading
+                + "&pitch="
+                + this.props.data.pitch
+                + "&fov="
+                + this.props.data.fov
           } >
       </iframe>
     );
