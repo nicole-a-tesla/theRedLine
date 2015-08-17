@@ -12,45 +12,52 @@ var IncomeVis = React.createClass({
         height: 250,
         width: 200
       },
+
       axis: {
+        x: {
+          show: false
+        },
         y: {
-            type: 'category',
-            tick: {
-                culling: {
-                    max: 3 // the number of tick texts will be adjusted to less than this value
-                }
-                // for normal axis, default on
-                // for category axis, default off
-            }
-        }
-    },
+          tick: {
+            values: [25000,50000, 75000],
+            format: d3.format("$")
+          }
+        },
+      },
+
       bindto: "#income",
+
       data: {
         columns: [
           ['Chicago', 47270]
       ],
-        type: 'bar'
+        type: 'bar',
+        labels: true
+          // format: d3.format('$')
       },
+
       color: {
         pattern: [ '#7f7f7f', '#d62728' ]
       },
 
       bar: {
+        title: neighborhood,
         width: {
           ratio: 0.5 // this makes bar width 50% of length between ticks
         }
-          // or
-      // width: 100 // this makes bar width 100px
     },
     tooltip: {
-      show: false
+      // show: false
+      format: {
+        title: function (x) { return 'Median Income' }
+      }
     }
   });
 
     setTimeout(function () {
       chart.load({
         columns: [
-          [neighborhood, incomeData[neighborhood]],
+          [neighborhood, incomeData[neighborhood]]
         ]
       });
     }, 1300);
