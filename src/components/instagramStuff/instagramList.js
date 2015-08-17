@@ -40,12 +40,18 @@ var InstagramList = React.createClass({
     });
   },
 
+  scrollToStart: function() {
+    $('.instagramList').animate({scrollLeft: 0}, 1000);
+  },
+
   componentWillReceiveProps: function() {
     this.loadInstagramData();
+    this.scrollToStart();
   },
 
   componentDidMount: function() {
     this.loadInstagramData();
+    this.scrollToStart();
   },
 
   render: function() {
