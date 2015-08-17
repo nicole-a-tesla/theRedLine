@@ -18,7 +18,10 @@ var InstagramList = React.createClass({
           var newUrls = []
 
           for (var i = 0; i < data["data"].length; i++) {
-            newUrls.push(data["data"][i]["images"]["standard_resolution"]["url"]);
+            // newUrls.push(data["data"][i]["images"]["standard_resolution"]["url"]);
+            var thisUrl = data["data"][i]["images"]["standard_resolution"]["url"];
+            var thisUrl = thisUrl.replace('s612x612', 's640x640')
+            newUrls.push(thisUrl);
 
       // temp limit to 12 images:
       // for (var i = 0; i < 12; i++) {
