@@ -66,18 +66,18 @@ var RaceVis = React.createClass({
               // 'Other': '#'
 
             // reds
-              'White': '#E53F21',
-              'Black': '#DD3B53',
-              'Latin@': '#BF5C5C',
-              'Asian': '#CB5937',
-              'Other': '#C9886F'
+              // 'White': '#E53F21',
+              // 'Black': '#DD3B53',
+              // 'Latin@': '#BF5C5C',
+              // 'Asian': '#CB5937',
+              // 'Other': '#C9886F'
 
             // original
-              // 'White': '#1f77b4',
-              // 'Black': '#ff7f0e',
-              // 'Latin@': '#2ca02c',
-              // 'Asian': '#9467bd',
-              // 'Other': '#8c564b',
+              'White': '#1f77b4',
+              'Black': '#ff7f0e',
+              'Latin@': '#2ca02c',
+              'Asian': '#9467bd',
+              'Other': '#8c564b',
         },
         type : 'donut',
 
