@@ -42,8 +42,9 @@ var Map = React.createClass({
   },
 
   moveDown: function() {
-    console.log(this.state)
+    // console.log(this.state)
     if(this.state.position + 1 < ctaStops.length){
+      this.props.onStationChange(this.state.position + 1);
       console.log('traveling down to station = ' + ctaStops[this.state.position + 1].station_name + ' at position = ' + this.state.position + " + 1");
 
       var newLat = ctaStops[this.state.position + 1].lat;
@@ -51,6 +52,7 @@ var Map = React.createClass({
 
       this.nativeMap.panTo([newLat, newLong], {animate: true, duration: 2});
       this.setState({position: this.state.position + 1});
+
     }
     else{
       var lat = ctaStops[this.state.position].lat
@@ -64,9 +66,10 @@ var Map = React.createClass({
   },
 
   moveUp: function() {
-    console.log(this.state)
+    // console.log(this.state)
 
     if(this.state.position - 1 >= 0 ){
+      this.props.onStationChange(this.state.position - 1);
       console.log('traveling up to station = ' + ctaStops[this.state.position - 1].station_name + ' at position = ' + this.state.position + " - 1");
 
       var newLat = ctaStops[this.state.position - 1].lat;
@@ -94,26 +97,12 @@ var Map = React.createClass({
       e.deltaY > 0 ? this.moveDown() : this.moveUp();
       this.nativeMap.once('moveend', function(){
         this.setState({moving: false});
-        this.props.onStationChange(this.state.position);
+        // this.props.onStationChange(this.state.position);
       }.bind(this))
     }
   },
 
-  onStationChange: function() {
-    // this.
-  },
-
-//
-  // grabRedLine: function() {
-  //   var sql = new cartodb.SQL({ user: 'nicole-a-tesla' });
-  //
-  //   sql.execute("SELECT * FROM parsed_stops", {format: 'geoJSON'})
-  //   .done(function(data) {
-  //   })
-  //   .error(function(errors) {
-  //     console.log("errors:" + errors);
-  //   })
-  // },
+  onStationChange: function() {},
 
   render: function() {
     return (
