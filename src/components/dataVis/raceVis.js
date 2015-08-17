@@ -86,7 +86,8 @@ var RaceVis = React.createClass({
         onmouseout: function (d, i) { console.log("onmouseout", d, i); }
       },
       donut: {
-        title: this.props.data.neighborhood
+        // title: this.props.data.neighborhood
+        title: "Demographics"
       }
     });
 

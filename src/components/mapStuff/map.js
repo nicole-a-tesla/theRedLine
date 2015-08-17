@@ -6,6 +6,16 @@ var Map = React.createClass({
     return {position: 0, lonOffset: 0.025, moving: false}
   },
 
+  // createSelector: function(layers,num,violent) {
+  //   for (var i = 0; i < layers.getSubLayerCount(); i++) {
+  //     if (i === num) {
+  //       layer.getSubLayer(i).show();
+  //     } else {
+  //       layer.getSubLayer(i).hide();
+  //     }
+  //   }
+  // },
+
   componentDidMount: function() {
     var url = 'https://nicole-a-tesla.cartodb.com/api/v2/viz/0713289c-2682-11e5-9584-0e49835281d6/viz.json'
 
@@ -16,6 +26,12 @@ var Map = React.createClass({
     })
     .done(function(vis, layers){
       this.nativeMap = vis.getNativeMap();
+
+      // $("p").on('click', function(e) {
+      //     var num = +$(e.target).attr('data');
+      //     this.createSelector(layers,num,$(e.target));
+      //   });
+
     }.bind(this));
 
 // use something like this to center the train line in the available screen regardless of screen size
@@ -101,9 +117,15 @@ var Map = React.createClass({
 
   render: function() {
     return (
-      <div id='map' onClick={this.moveTo} onWheel={this.onWheel}></div>
+      <div id='map' onClick={this.moveTo} onWheel={this.onWheel}>
+
+      </div>
     )
   }
 })
 
 module.exports = Map;
+
+// <div>
+//   <p className="layer-selector" id="neighborhood-selector" data="3">Toggle Neighborhood Boundaries</p>
+// </div>
