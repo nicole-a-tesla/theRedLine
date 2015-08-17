@@ -9,7 +9,7 @@ var IncomeVis = React.createClass({
 
     var chart = c3.generate({
       size: {
-        height: 250,
+        height: 255,
         width: 200
       },
 
@@ -20,7 +20,7 @@ var IncomeVis = React.createClass({
         y: {
           tick: {
             values: [25000,50000, 75000],
-            format: d3.format("$")
+            format: d3.format("$,")
           }
         },
       },
@@ -32,8 +32,9 @@ var IncomeVis = React.createClass({
           ['Chicago', 47270]
       ],
         type: 'bar',
-        labels: true
-          // format: d3.format('$')
+        labels: {
+          format: d3.format('$,')
+        }
       },
 
       color: {
@@ -45,14 +46,24 @@ var IncomeVis = React.createClass({
         width: {
           ratio: 0.5 // this makes bar width 50% of length between ticks
         }
-    },
+      },
+
     tooltip: {
-      // show: false
-      format: {
-        title: function (x) { return 'Median Income' }
-      }
+      show: false
+      // format: {
+      //   title: function (x) { return 'Median Income' },
+      //   value: d3.format('$,')
+      // }
     }
   });
+
+  d3.select("svg").append("text")
+    .attr("x", 120)
+    .attr("y", 15)
+    .style("font-size", "12px")
+    .style("font-weight", "100")
+    .style("text-anchor", "middle")
+    .text("Median Income");
 
     setTimeout(function () {
       chart.load({
