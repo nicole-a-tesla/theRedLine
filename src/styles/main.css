@@ -253,3 +253,20 @@ rect {
   fill: white;
   font-weight: 100;
 }
+
+#neighborhoodLabel {
+  margin: 0;
+  display: inline-block;
+  font-weight: 100;
+  color: white;
+  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -webkit-transform-origin: 50% 50% ;
+  font-size: 25px;
+  width: 150px;
+  height: 35px;
+  margin-right: -80px;
+  margin-left: -50px;
+  margin-top: -50px !important;
+
+}
