@@ -27,6 +27,9 @@ var Map = React.createClass({
     .done(function(vis, layers){
       this.nativeMap = vis.getNativeMap();
 
+      this.divIcon = L.divIcon({className: 'stationMarker', iconSize:[10,10]});
+      this.marker  = L.marker([42.019063, -87.672892], {icon: this.divIcon}).addTo(this.nativeMap);
+
       // $("p").on('click', function(e) {
       //     var num = +$(e.target).attr('data');
       //     this.createSelector(layers,num,$(e.target));
@@ -45,6 +48,7 @@ var Map = React.createClass({
     // console.log(this.state)
     if(this.state.position + 1 < ctaStops.length){
       this.props.onStationChange(this.state.position + 1);
+      this.marker.setLatLng([ctaStops[this.state.position + 1].lat, ctaStops[this.state.position + 1].long ])
       console.log('traveling down to station = ' + ctaStops[this.state.position + 1].station_name + ' at position = ' + this.state.position + " + 1");
 
       var newLat = ctaStops[this.state.position + 1].lat;
@@ -70,6 +74,7 @@ var Map = React.createClass({
 
     if(this.state.position - 1 >= 0 ){
       this.props.onStationChange(this.state.position - 1);
+      this.marker.setLatLng([ctaStops[this.state.position - 1].lat, ctaStops[this.state.position - 1].long ])
       console.log('traveling up to station = ' + ctaStops[this.state.position - 1].station_name + ' at position = ' + this.state.position + " - 1");
 
       var newLat = ctaStops[this.state.position - 1].lat;
