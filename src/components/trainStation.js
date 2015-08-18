@@ -5,6 +5,7 @@ var ctaStops =  require('./ctaStops');
 var $ = require('jquery');
 var IncomeVis = require('./dataVis/incomeVis');
 var RaceVis = require('./dataVis/raceVis');
+var NeighborhoodLabel = require('./dataVis/neighborhoodLabel')
 
 var TrainStation = React.createClass({
 
@@ -19,6 +20,7 @@ var TrainStation = React.createClass({
         <StreetViewContainer className={'streetViewContainer'} data={ctaStops[this.props.position]} />
         <InstagramContainer className={'instagramContainer'} data={ctaStops[this.props.position]} />
         <div id='dataVis'>
+          <NeighborhoodLabel data={ctaStops[this.props.position]} />
           <IncomeVis data={ctaStops[this.props.position]} />
           <RaceVis data={ctaStops[this.props.position]} />
         </div>
