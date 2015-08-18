@@ -4,10 +4,25 @@ var incomeData = require('../incomeData')
 
 var IncomeVis = React.createClass({
 
-  makeAChart: function() {
-    var neighborhood = this.props.data.neighborhood;
+  shouldComponentUpdate: function(nextProps, nextState) {
+    console.log('in shouldComponentUpdate');
+    console.log("this.props.data.neighborhood = ");
+    console.log(this.props.data.neighborhood);
+    console.log("nextProps.data.neighborhood = ");
+    console.log(nextProps.data.neighborhood);
+    console.log(this.props.data.neighborhood !== nextProps.data.neighborhood);
 
-    var chart = c3.generate({
+    if (this.props.data.neighborhood !== nextProps.data.neighborhood) {
+      this.lastNeighborhood = this.props.data.neighborhood;
+      this.neighborhood = nextProps.data.neighborhood;
+    }
+    return this.props.data.neighborhood !== nextProps.data.neighborhood;
+  },
+
+  makeAChart: function() {
+    this.neighborhood = this.props.data.neighborhood;
+
+    this.chart = c3.generate({
       size: {
         height: 255,
         width: 200
@@ -29,7 +44,9 @@ var IncomeVis = React.createClass({
 
       data: {
         columns: [
-          ['Chicago', 47270]
+          ['Chicago', 47270],
+          ["Here", incomeData[this.neighborhood]]
+
       ],
         type: 'bar',
         labels: {
@@ -42,7 +59,7 @@ var IncomeVis = React.createClass({
       },
 
       bar: {
-        title: neighborhood,
+        title: this.neighborhood,
         width: {
           ratio: 0.5 // this makes bar width 50% of length between ticks
         }
@@ -50,10 +67,6 @@ var IncomeVis = React.createClass({
 
     tooltip: {
       show: false
-      // format: {
-      //   title: function (x) { return 'Median Income' },
-      //   value: d3.format('$,')
-      // }
     }
   });
 
@@ -65,13 +78,13 @@ var IncomeVis = React.createClass({
     .style("text-anchor", "middle")
     .text("Median Income");
 
-    setTimeout(function () {
-      chart.load({
-        columns: [
-          [neighborhood, incomeData[neighborhood]]
-        ]
-      });
-    }, 1300);
+    // setTimeout(function () {
+    //   chart.load({
+    //     columns: [
+    //       [neighborhood, incomeData[neighborhood]]
+    //     ]
+    //   });
+    // }, 1300);
 
   },
 
@@ -80,7 +93,12 @@ var IncomeVis = React.createClass({
   },
 
   componentDidUpdate: function() {
-    this.makeAChart();
+    this.chart.load({
+      columns: [
+        ["Here", incomeData[this.neighborhood]]
+      ]
+    });
+
   },
 
   render: function() {
