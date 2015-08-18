@@ -4,19 +4,26 @@ var ctaStops =  require('../ctaStops');
 
 
 var RaceVis = React.createClass({
+  shouldComponentUpdate: function(nextProps, nextState) {
+    console.log('shouldComponentUpdate? RACEVIS');
+    console.log(this.props.data.neighborhood);
+    console.log(nextProps.data.neighborhood);
+    console.log(this.props.data.neighborhood !== nextProps.data.neighborhood);
+
+    if (this.props.data.neighborhood !== nextProps.data.neighborhood) {
+      this.lastNeighborhood = this.props.data.neighborhood;
+      this.neighborhood = nextProps.data.neighborhood;
+    }
+    return this.props.data.neighborhood !== nextProps.data.neighborhood;
+
+  },
 
   makeAChart: function() {
-    var station_name = this.props.data.station_name;
+    // var station_name = this.props.data.station_name;
     var neighborhood = this.props.data.neighborhood;
-    var position = this.props.data.position;
+    // var position = this.props.data.position;
 
-    // this doesn't work for going backward....
-    var lastNeighborhood = position == 0 ? neighborhood : ctaStops[position - 1]['neighborhood']
-
-    // console.log('last one was...');
-    // console.log(lastNeighborhood);
-
-    var chart = c3.generate({
+    this.chart = c3.generate({
       size: {
         height: 250,
         width: 400
@@ -24,23 +31,12 @@ var RaceVis = React.createClass({
       bindto: "#race",
       data: {
         columns: [
-            raceData[lastNeighborhood][0],
-            raceData[lastNeighborhood][1],
-            raceData[lastNeighborhood][2],
-            raceData[lastNeighborhood][3],
-            raceData[lastNeighborhood][4]
-            //
-            // ['White', 0],
-            // ['Black', 0],
-            // ['Latin@', 0],
-            // ['Asian', 0],
-            // ['Other', 0]
 
-            // raceData[neighborhood][0],
-            // raceData[neighborhood][1],
-            // raceData[neighborhood][2],
-            // raceData[neighborhood][3],
-            // raceData[neighborhood][4]
+            raceData[neighborhood][0],
+            raceData[neighborhood][1],
+            raceData[neighborhood][2],
+            raceData[neighborhood][3],
+            raceData[neighborhood][4]
 
         ],
         colors: {
@@ -50,20 +46,6 @@ var RaceVis = React.createClass({
               // 'Latin@': '#C3965B',
               // 'Asian': '#68B5B9',
               // 'Other': '#B2BE62'
-
-            // dark
-              // 'White': '#334935',
-              // 'Black': '#774743',
-              // 'Latin@': '#565163',
-              // 'Asian': '#64592C',
-              // 'Other': '#386960'
-
-
-              // 'White': '#',
-              // 'Black': '#',
-              // 'Latin@': '#',
-              // 'Asian': '#',
-              // 'Other': '#'
 
             // reds
               // 'White': '#E53F21',
@@ -85,38 +67,14 @@ var RaceVis = React.createClass({
         onmouseover: function (d, i) { console.log("onmouseover", d, i); },
         onmouseout: function (d, i) { console.log("onmouseout", d, i); }
       },
+      transition: {
+        duration: 300
+      },
       donut: {
-        // title: this.props.data.neighborhood
         title: "Demographics"
       }
     });
 
-    // console.log('station_name = ');
-    // console.log(station_name);
-    // console.log(raceData['Rogers Park']);
-
-
-    setTimeout(function () {
-      chart.load({
-        columns: [
-            raceData[neighborhood][0],
-            raceData[neighborhood][1],
-            raceData[neighborhood][2],
-            raceData[neighborhood][3],
-            raceData[neighborhood][4]
-        ]
-      });
-    }, 1500);
-
-
-    // setTimeout(function () {
-      // chart.unload({
-      //   ids: ''
-      // });
-      // chart.unload({
-      //   ids: ''
-      // });
-    // }, 2500);
   },
 
   componentDidMount: function() {
@@ -124,7 +82,17 @@ var RaceVis = React.createClass({
   },
 
   componentDidUpdate: function() {
-    this.makeAChart();
+
+    this.chart.load({
+      columns: [
+        raceData[this.neighborhood][0],
+        raceData[this.neighborhood][1],
+        raceData[this.neighborhood][2],
+        raceData[this.neighborhood][3],
+        raceData[this.neighborhood][4]
+      ]
+    });
+
   },
 
   render: function() {
