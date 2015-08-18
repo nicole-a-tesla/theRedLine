@@ -5,12 +5,6 @@ var incomeData = require('../incomeData')
 var IncomeVis = React.createClass({
 
   shouldComponentUpdate: function(nextProps, nextState) {
-    console.log('in shouldComponentUpdate');
-    console.log("this.props.data.neighborhood = ");
-    console.log(this.props.data.neighborhood);
-    console.log("nextProps.data.neighborhood = ");
-    console.log(nextProps.data.neighborhood);
-    console.log(this.props.data.neighborhood !== nextProps.data.neighborhood);
 
     if (this.props.data.neighborhood !== nextProps.data.neighborhood) {
       this.lastNeighborhood = this.props.data.neighborhood;
@@ -77,14 +71,6 @@ var IncomeVis = React.createClass({
     .style("font-weight", "100")
     .style("text-anchor", "middle")
     .text("Median Income");
-
-    // setTimeout(function () {
-    //   chart.load({
-    //     columns: [
-    //       [neighborhood, incomeData[neighborhood]]
-    //     ]
-    //   });
-    // }, 1300);
 
   },
 
