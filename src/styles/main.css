@@ -213,25 +213,6 @@ html {
   right: 0px;
 }
 
-.dataVis {
-  display: flex;
-  -webkit-flex-flow: row;
-  margin-top: 30px;
-}
-
-#income {
-  display: inline-block;
-  margin-left: 20px;
-
-  stroke: white;
-  fill: white;
-  font-weight: 100;
-}
-
-#race {
-  display: inline-block;
-}
-
 .leaflet-marker-icon.stationMarker{
 
   border-radius: 10px;
@@ -257,19 +238,36 @@ rect {
   font-weight: 100;
 }
 
+
+.dataVis {
+  margin-top: 30px;
+}
+
+#income {
+  display: inline-block;
+  margin-left: 10%;
+
+  stroke: white;
+  fill: white;
+  font-weight: 100;
+}
+
+#race {
+  display: inline-block;
+}
+
 #neighborhoodLabel {
   margin: 0;
   display: inline-block;
   font-weight: 100;
   color: white;
-  transform: rotate(270deg);
-  -webkit-transform: rotate(270deg);
-  -webkit-transform-origin: 50% 50% ;
+  /*transform: rotate(270deg);*/
+  -webkit-transform: rotate(270deg) translate(-145px, 60px);
+  -webkit-transform-origin: 0% 100% ;
   font-size: 25px;
-  width: 100px;
-  height: 5px;
-  margin-right: -80px;
-  margin-left: -50px;
-  margin-top: -50px !important;
+  position: absolute;
+}
+
+#neighborhoodLabel p {
 
 }
