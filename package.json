@@ -10,6 +10,7 @@
   "mainInput": "main",
   "mainOutput": "main",
   "dependencies": {
+    "c3": "^0.4.11-rc3",
     "jquery": "*",
     "normalize.css": "~3.0.3",
     "react": "~0.12.2",
