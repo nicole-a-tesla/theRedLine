@@ -49,7 +49,7 @@ var IncomeVis = React.createClass({
       },
 
       color: {
-        pattern: [ '#7f7f7f', '#d62728' ]
+        pattern: [ '#7f7f7f', '#B81609' ]
       },
 
       bar: {
