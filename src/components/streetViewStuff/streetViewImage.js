@@ -10,9 +10,9 @@ var StreetViewImage = React.createClass({
         frameborder="0"
         src={
                 "https://www.google.com/maps/embed/v1/streetview?key=AIzaSyBU2ArHRLAJwCb8Akp_ieojJMoM_92XaHk&location="
-                + this.props.data.lat
+                + this.props.data.street_view_lat
                 + ","
-                + this.props.data.long
+                + this.props.data.street_view_long
                 + "&heading="
                 + this.props.data.heading
                 + "&pitch="

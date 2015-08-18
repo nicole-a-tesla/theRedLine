@@ -232,6 +232,13 @@ html {
   display: inline-block;
 }
 
+.leaflet-marker-icon.stationMarker{
+
+  border-radius: 10px;
+  background-color: yellow;
+
+}
+
 
 .c3-legend-item {
   shape-rendering: crispEdges;
