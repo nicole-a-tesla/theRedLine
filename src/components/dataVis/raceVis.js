@@ -68,7 +68,7 @@ var RaceVis = React.createClass({
         onmouseout: function (d, i) { console.log("onmouseout", d, i); }
       },
       transition: {
-        duration: 300
+        duration: 450
       },
       donut: {
         title: "Demographics"
