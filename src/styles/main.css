@@ -243,6 +243,10 @@ rect {
   margin-top: 30px;
 }
 
+#dataVis {
+  margin-top: 4%;
+}
+
 #income {
   display: inline-block;
   margin-left: 10%;
@@ -270,4 +274,16 @@ rect {
 
 #neighborhoodLabel p {
 
+}
+
+.c3-chart-arc path {
+  stroke: #000;
+}
+
+.c3-chart-arc text {
+  fill: #fff;
+}
+
+.c3-chart-arcs text {
+  color: #fff;
 }

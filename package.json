@@ -11,6 +11,7 @@
   "mainOutput": "main",
   "dependencies": {
     "c3": "^0.4.11-rc3",
+    "d3": "^3.5.6",
     "jquery": "*",
     "normalize.css": "~3.0.3",
     "react": "~0.12.2",
