@@ -267,7 +267,9 @@ rect {
   color: white;
   /*transform: rotate(270deg);*/
   -webkit-transform: rotate(270deg) translate(-145px, 60px);
+  -moz-transform: rotate(270deg) translate(-145px, 60px);
   -webkit-transform-origin: 0% 100% ;
+  -moz-transform-origin: 0% 100% ;
   font-size: 25px;
   position: absolute;
 }

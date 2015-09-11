@@ -22,8 +22,6 @@ var Wrapper = React.createClass({
   },
 
   render: function() {
-    // console.log(ctaStops[this.state.position].station_name);
-
     return (
       <div id="wrapper">
         <Map onStationChange={this.stationChange} data={this.state.data} />

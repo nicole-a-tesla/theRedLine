@@ -5,10 +5,6 @@ var ctaStops =  require('../ctaStops');
 
 var RaceVis = React.createClass({
   shouldComponentUpdate: function(nextProps, nextState) {
-    console.log('shouldComponentUpdate? RACEVIS');
-    console.log(this.props.data.neighborhood);
-    console.log(nextProps.data.neighborhood);
-    console.log(this.props.data.neighborhood !== nextProps.data.neighborhood);
 
     if (this.props.data.neighborhood !== nextProps.data.neighborhood) {
       this.lastNeighborhood = this.props.data.neighborhood;

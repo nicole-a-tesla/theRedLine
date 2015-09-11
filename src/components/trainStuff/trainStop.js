@@ -24,8 +24,6 @@ var TrainStop = React.createClass({
       var stop = Math.round($(window).scrollLeft());
 
       if (stop > whereTheStationIs) {
-        // console.log('youve scrolled past' + stop + ', which is where ' + this.props.stopName + ' lives' );
-        // console.log(this.props.stopName + ' lives at ' + whereTheStationIs);
         var lastStop = this.props.position - 1;
         var nextStop = this.props.position + 1;
 
