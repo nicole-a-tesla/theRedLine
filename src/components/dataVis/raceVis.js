@@ -15,9 +15,7 @@ var RaceVis = React.createClass({
   },
 
   makeAChart: function() {
-    // var station_name = this.props.data.station_name;
     var neighborhood = this.props.data.neighborhood;
-    // var position = this.props.data.position;
 
     this.chart = c3.generate({
       size: {
@@ -36,13 +34,7 @@ var RaceVis = React.createClass({
 
         ],
         colors: {
-            // pastel
-              // 'White': '#75BA85',
-              // 'Black': '#B997B1',
-              // 'Latin@': '#C3965B',
-              // 'Asian': '#68B5B9',
-              // 'Other': '#B2BE62'
-
+  
             // reds
               // 'White': '#E53F21',
               // 'Black': '#DD3B53',

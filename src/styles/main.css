@@ -1,96 +1,3 @@
-/* Stiziles */
-
-/*html, body {
-  background: #222222;
-  width:100%;
-  height:100%;
-  padding:0px;
-  margin: 0px;
-}*/
-
-/* main */
-
-/*#content{
-  width:100%;
-  height:100%;
-}*/
-/*.main {
-  width: 100%;
-  height: 100%;
-  background: #222222;
-  color: #fff;
-}*/
-
-/*.main img {
-  width: 103px;
-  height: 89px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.fade-enter {
-  opacity: 0.01;
-  transition: opacity .5s ease-in;
-}
-
-.fade-enter.fade-enter-active {
-  opacity: 1;
-}
-
-.fade-leave {
-  opacity: 1;
-  transition: opacity .5s ease-in;
-}
-
-.fade-leave.fade-leave-active {
-  opacity: 0.01;
-}*/
-/*#stationsWrapper {
-  display: flex;
-  -webkit-flex-flow: row;
-}*/
-
-/*
-#trainStopsBox {
-  background-color: #CE072D;
-  position: fixed;
-  width: 100%;
-  top: 0px;
-  left: 0px;
-  margin-bottom: 10px;
-}
-
-#trainStopsList {
-  display: flex;
-  justify-content: center;
-}
-
-.trainStop {
-  display: inline-block;
-}*/
-/*.streetViewByStop {
-  padding: 0;
-  margin: 0;
-}*/
-
-/*.fakeButton {
-  background-color: white;
-  border-radius: 20px;
-  padding: 0px 9px;
-  margin: 0px 3px 0px 3px;
-  color: inherit;
-  text-decoration: none;
-}*/
-
-/*.active {
-  background-color: black;
-  color: white;
-}
-
-.fakeButton:hover {
-  background-color: black;
-  color: white;
-}*/
 
 a {
   text-decoration: none;
@@ -109,17 +16,8 @@ text.c3-chart-arcs-title {
   border: none;
 }
 
-/*svg {
-  width: 250px;
-  height: 250px;
-}*/
-
 #wrapper {
   white-space: nowrap;
-}
-
-#instagramContainer {
-  /*overflow: scroll;*/
 }
 
 ul.instagramList {
@@ -149,11 +47,6 @@ img.instagramImage {
   max-width: none;
   width: 200px;
   height: 200px;
-
-}
-
-li.instagramImageListItem img.instagramImage {
-  /*margin-right: 726px !important;*/
 
 }
 
@@ -206,7 +99,6 @@ html {
   width: 50%;
   background-color: rgba(0,0,0,0.2);
   height: 100%;
-  /*opacity:0.2;*/
   z-index: 10;
   position: absolute;
   top: 0px;
@@ -218,9 +110,6 @@ html {
   border-radius: 10px;
   background-color: black;
   border: 2px solid #B81609;
-  /*border: 2px solid #B81609;
-
-  background-color: #B81609;*/
 }
 
 
@@ -265,7 +154,6 @@ rect {
   display: inline-block;
   font-weight: 100;
   color: white;
-  /*transform: rotate(270deg);*/
   -webkit-transform: rotate(270deg) translate(-145px, 60px);
   -moz-transform: rotate(270deg) translate(-145px, 60px);
   -webkit-transform-origin: 0% 100% ;
