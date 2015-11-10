@@ -3,6 +3,7 @@
 var React = require('react/addons');
 var ReactTransitionGroup = React.addons.TransitionGroup;
 var Wrapper   = require('./wrapper')
+var InstructionsModal = require('./instructionsModal')
 // CSS
 require('normalize.css');
 require('../styles/main.css');
@@ -13,6 +14,7 @@ var TheRedLineApp = React.createClass({
   render: function() {
     return (
       <div className='main'>
+      <InstructionsModal />
         <Wrapper url='/ctaData/parsed_stops.json' />
       </div>
     );
