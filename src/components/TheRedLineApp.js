@@ -14,7 +14,6 @@ var TheRedLineApp = React.createClass({
   render: function() {
     return (
       <div className='main'>
-      <InstructionsModal />
         <Wrapper url='/ctaData/parsed_stops.json' />
       </div>
     );
