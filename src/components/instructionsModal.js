@@ -8,21 +8,12 @@ var InstructionsModal = React.createClass({
 
   handleClick: function(event) {
     this.setState({isClosed: true});
-<<<<<<< Updated upstream
-=======
-    // document.getElementById('modal').style.display='none';
->>>>>>> Stashed changes
+
   },
 
   render: function() {
     var isClosed = this.state.isClosed;
     var style = {
-    }
-
-    if (isClosed) {
-        style = {
-            'display': 'none'
-        };
     }
 
     if(this.state.isClosed){
