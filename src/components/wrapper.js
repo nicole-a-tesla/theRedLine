@@ -26,7 +26,6 @@ var Wrapper = React.createClass({
   render: function() {
     return (
       <div id="wrapper">
-        <InstructionsModal />
         <Map onStationChange={this.stationChange} data={this.state.data} />
         <TrainStation data={this.state.data} position={this.state.position}/>
       </div>
